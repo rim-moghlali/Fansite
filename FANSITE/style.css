@@ -1,0 +1,392 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wgt@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); */
+@import url(https://fonts.googleapis.com/css?family=Tangerine);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+body {
+    font-family: 'Tangerine', serif;
+    background-color: white;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1050px;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    padding-top: 60px;
+}
+
+.navbar {
+    width: 100%;
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+    max-width: none;
+    /* background-color: rbga(255, 255, 255, 0.5); */
+ 
+}
+
+/* .navbar .menu-items {
+    display: flex;
+} */
+
+.navbar .nav-container li {
+    list-style: none;
+}
+
+.navbar .nav-container a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 3rem;
+    padding: 0.7rem;
+}
+
+.navbar .nav-container a:hover {
+    font-weight: bolder;
+}
+
+.nav-container {
+    display: block;
+    position: relative;
+    height: 60px;
+}
+
+.nav-container .checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.nav-container .wine-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav-container .wine-lines .line{
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #0e2431;
+}
+
+.nav-container .wine-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+
+}
+
+.nav-container .wine-lines .line2 {
+    transition: transform 0.4s ease-in-out;
+    
+}
+
+.nav-container .wine-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+    
+}
+
+.navbar .menu-items {
+    padding-top: 10px;
+    /* box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5); */
+    /* background-color: white; */
+    height: 100vh;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    /* text-align: center; */
+    background: black;
+    width: fit-content;
+    height: fit-content;
+    padding: 48px;
+    border-radius: 24px;
+}
+
+.nabar .menu-items li {
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.logo {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 1.2rem;
+    color: #0e2431;
+}
+
+.nav-container input[type="checkbox"]:checked~.menu-items {
+    transform: translateX(0);
+}
+
+.nav-container input[type="checkbox"]:checked~.wine-lines .line1 {
+    transform: rotate(45deg);
+}
+
+.nav-container input[type="checkbox"]:checked~.wine-lines .line2 {
+    transform: scaleY(0);
+}
+
+.nav-container input[type="checkbox"]:checked~.wine-lines .line3 {
+    transform: rotate(-45deg);
+}
+
+.nav-container input[type="checkbox"]:checked~.logo {
+    display: none;
+}
+
+@keyframes changeurImages {
+    0% {
+        background-image: url("images/image1.jpg");
+    }
+    33% {
+        background-image: url("images/image2.jpg");
+    }
+    66% {
+        background-image: url("images/image3.jpg");
+    }
+    100% {
+        background-image: url("images/image1.jpg");
+    }
+}
+
+#imageViewer{
+    width: 100%;
+    height: 100%;
+    animation: changeurImages 10s ease-in-out 0s infinite;
+    animation-direction: alternate;
+}
+
+main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titre1{
+    /* box-sizing: border-box; */
+    color: white;
+    filter: drop-shadow(2px 4px 6px black);
+    align-self: center;
+    font-size: 50px;
+    padding-top: 50px;
+}
+
+
+.p {
+    font-size: 10px;
+    align-items: center;
+   color: white;
+}
+
+
+/* --- PAGE HISTOIRE */
+
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wgt@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); */
+@import url(https://fonts.googleapis.com/css?family=Tangerine);
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+/* 
+  p, ol, ul, dl {
+    font-family: sans-serif;
+    font-size: 18px;
+    text-align: left;
+  } */
+
+#historyBody {
+    font-family: 'Tangerine', serif;
+    background-color: white;
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+#historyBody img {
+    width: auto;
+    height: 30vh;
+    /* display: inline-block; */
+    position: relative;
+    margin: 0 auto;
+    display: block;
+}
+
+.textehistoire {
+    /* background: rgba(0, 0, 0, 0.8); */
+    z-index: 1;
+    /* position: absolute; */
+    text-align: center;
+    font-family: 'Tangerine', serif;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 30%;
+    color: black;
+    width: 70%;
+    font-size: 30px;
+}
+
+
+#historyBody main h1 {
+    color: black;
+    text-align: center;
+    margin: 24px 0;
+}
+
+#historyBody p{
+    margin: 24px 0;
+    font-size: 30px;
+}
+
+#historyBody h2 {
+    text-align: center;
+    color: black;
+    font-size: 30px;
+}
+
+#historyBody main {
+    display: block;
+    position: relative;
+    flex-direction: column;
+    padding-top: 65px;
+}
+
+.video iframe {
+    align-items: center;
+}
+
+/* ----- PAGE LES DOAMINES--------- */
+
+
+
+
+#lesdomainesBody p {
+    font-size: 30px;
+    flex: 1.5;
+    padding: 60px;
+}
+
+
+.slide {
+    width: 100vw;
+    height: calc(100vh - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    padding-top: 20px;
+}
+
+.blocHorizontal {
+    display: flex;
+    flex-direction: row;
+    width: 300vw;
+    /* transform: translateX(-100vW); */
+    transform-origin: top left;
+}
+
+.containerbody {
+    transform-origin: top left;
+    padding-top: 60px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.one {
+    background-color: rgb(244, 204, 204);
+    justify-content: start;
+    flex-direction: column;
+}
+ 
+.presentationceliers {
+    display: flex;
+    padding: 24px;
+
+}
+
+#lesdomainesBody iframe{
+  flex: 1;
+}
+
+.two {
+    background-color: beige;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.presentationzouina {
+    display: flex;
+    padding: 24px;
+
+}
+
+#lesdomainesBody img {
+    flex: 1;
+    width:600px;
+}
+
+.three {
+    background-color: rgb(244, 204, 204);
+    justify-content: start;
+    flex-direction: column;
+}
+
+.presentationamal {
+    display: flex;
+    padding: 24px;
+
+}
+
